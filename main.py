@@ -12,7 +12,11 @@ def encode(password):
 
 # Decoder
 def decode(password):
-    pass
+    password = list(password)
+    encoded_password = ''
+    for x in password:
+        encoded_password += str(int(x) + 7)[-1]
+    return encoded_password
 
 
 # main code
